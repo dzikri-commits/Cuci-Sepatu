@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok 7</title>
+    
+    <link rel="stylesheet" href="templatemo-glossy-touch.css">
+    <link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<!--
+
+TemplateMo 592 glossy touch
+
+https://templatemo.com/tm-592-glossy-touch
+
+-->
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- SINGLE NAVIGATION HEADER -->
+    <header>
+        <div class="container">
+            <nav class="glass">
+                <div class="logo" onclick="showPage('home')">
+                    <div class="logo-icon">
+                        <img src="images/logo_cuci_sepatu-removebg-preview.png" alt="Clean Shoes"
+                        <svg viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Grid of circles with varying sizes -->
+                            <circle cx="16" cy="16" r="5" opacity="0.9"/>
+                            <circle cx="32" cy="16" r="4" opacity="0.8"/>
+                            <circle cx="16" cy="32" r="4" opacity="0.7"/>
+                            <circle cx="32" cy="32" r="5" opacity="0.85"/>
+                            <!-- Small accent dots -->
+                            <circle cx="24" cy="8" r="2" opacity="1"/>
+                            <circle cx="8" cy="24" r="2" opacity="0.9"/>
+                            <circle cx="40" cy="24" r="2" opacity="0.9"/>
+                            <circle cx="24" cy="40" r="2" opacity="1"/>
+                            <!-- Tiny corner dots -->
+                            <circle cx="8" cy="8" r="1" opacity="0.6"/>
+                            <circle cx="40" cy="8" r="1" opacity="0.6"/>
+                            <circle cx="8" cy="40" r="1" opacity="0.6"/>
+                            <circle cx="40" cy="40" r="1" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <span>Clean Shoes</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" onclick="showPage('home')" class="active">Home</a>
+                    <a href="#" onclick="showPage('about')">About</a>
+                    <a href="#" onclick="showPage('services')">Services</a>
+                    <a href="#" onclick="showPage('contact')">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <div class="hero-image">
+                        <img src="images/templatemo-futuristic-girl.jpg" alt="Modern Technology Interaction" />
+                    </div>
+                    <div class="hero-content">
+                        <h1>Selamat Datang di Cuci Sepatu</h1>
+                        <p>Cuci sepatu adalah layanan pembersihan sepatu yang bertujuan menghilangkan debu, noda, dan kotoran agar sepatu kembali bersih, wangi, dan nyaman digunakan. Proses pencucian dilakukan dengan metode yang sesuai sehingga kualitas, warna, dan bentuk sepatu tetap terjaga.</p>
+                        <a href="#" class="cta-button" onclick="showPage('about')">Learn More</a>
+                    </div>
+                </section>
+
+                <section class="features">
+                    <div class="feature-card glass">
+                        <div class="feature-icon">
+                        <img src="images/Basic Clean.png" alt="Basic Clean">
+                        </div>
+                        <h3>Basic Clean</h3>
+                        <p>merupakan layanan pencucian dasar untuk menghilangkan debu, kotoran ringan, dan noda pada bagian luar sepatu sehingga kembali bersih dan segar digunakan.</p>
+                    </div>
+                    
+                    <div class="feature-card glass">
+                        <div class="feature-icon">
+                            <img src="images/Deep Clean.png" alt="Deep Clean">
+                        </div>
+                        <h3>Deep Clean</h3>
+                        <p>merupakan layanan pencucian yang lebih intens, mencakup bagian dalam dan luar sepatu untuk menghilangkan kotoran dan noda yang lebih dalam.</p>
+                    </div>
+                    
+                    <div class="feature-card glass">
+                        <div class="feature-icon">
+                            <img src="images/Premium.png" alt="Premium Treatment">
+                        </div>
+                        <h3>Premium Treatment</h3>
+                        <p>merupakan perawatan khusus untuk sepatu berbahan sensitif seperti suede, kulit, nubuck, dan knit dengan metode serta produk yang disesuaikan agar kualitas material tetap terjaga.</p>
+                    </div>
+
+                    <div class="feature-card glass">
+                        <div class="feature-icon">
+                            <img src="images/Repaint.png" alt="Repaint">
+                        </div>
+                        <h3>Repaint</h3>
+                        <p>merupakan layanan pengecatan ulang untuk mengembalikan warna sepatu yang pudar atau terkelupas agar terlihat lebih rapi dan menarik.</p>
+                    </div>
+
+                    <div class="feature-card glass">
+                        <div class="feature-icon">
+                            <img src="images/Unyellowing.png" alt="Unyellowing">
+                        </div>
+                        <h3>Unyellowing</h3>
+                        <p>adalah treatment untuk membantu mengurangi warna kuning pada bagian midsole atau outsole akibat proses oksidasi sehingga tampilan sepatu menjadi lebih cerah.</p>
+                    </div>
+
+                    <div class="feature-card glass">
+                        <h3>Garansi Treatment</h3>
+                        <p>Seluruh proses dilakukan secara manual menggunakan produk yang aman sesuai jenis material sepatu. Apabila hasil treatment belum sesuai dengan layanan yang dipilih, pelanggan dapat mengajukan pemeriksaan dan treatment ulang sesuai ketentuan yang berlaku. Garansi tidak mencakup kerusakan material, noda permanen, perubahan warna akibat usia pemakaian, maupun kerusakan yang sudah ada sebelum proses treatment.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="about-content">
+                    <div class="about-text glass">
+                        <h2>About Our Vision</h2>
+                        <p>Visi kami adalah menjadi layanan cuci sepatu yang terpercaya dengan mengutamakan kualitas, ketelitian, dan kepuasan pelanggan. Kami percaya bahwa setiap pasang sepatu memiliki nilai dan cerita tersendiri, sehingga layak mendapatkan perawatan terbaik agar tetap bersih, nyaman digunakan, dan memiliki usia pakai yang lebih lama.</p>
+                        <p>Melalui proses pembersihan yang dilakukan secara profesional dan menggunakan produk yang aman, kami berkomitmen untuk memberikan hasil yang maksimal tanpa merusak bahan maupun warna sepatu. Kami juga terus berinovasi dalam meningkatkan kualitas layanan agar mampu memenuhi kebutuhan pelanggan yang semakin beragam.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-card glass">
+                            <div class="stat-number">999+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">989873+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">9</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support Available</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="team-section">
+                    <h2>Meet Our Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member glass">
+                            <div class="team-avatar">
+                                <img src="images/ziyad.jpeg" alt="ziyad">
+                            </div>
+                            <h3>Ziyad Gawoks</h3>
+                            <p class="role">CEO & Founder</p>
+                            <p class="bio">Visionary leader with 15+ years in digital innovation, driving our mission to create exceptional user experiences.</p>
+                            <div class="team-social">
+                                <a href="#" title="Email">📧</a>
+                                <a href="#" title="LinkedIn">💼</a>
+                                <a href="#" title="Twitter">🐦</a>
+                            </div>
+                        </div>
+                        <div class="team-member glass">
+                            <div class="team-avatar">
+                                <img src="images/niko.jpeg" alt="Gondrong Ponggok">
+                            </div>
+                            <h3>Gondrong Ponggok</h3>
+                            <p class="role">Creative Director</p>
+                            <p class="bio">Award-winning designer specializing in modern UI/UX, bringing artistic vision to every project.</p>
+                            <div class="team-social">
+                                <a href="#" title="Email">📧</a>
+                                <a href="#" title="LinkedIn">💼</a>
+                                <a href="#" title="Portfolio">🎨</a>
+                            </div>
+                        </div>
+                        <div class="team-member glass">
+                            <div class="team-avatar">
+                                <img src="images/dzikri.jpeg" alt="Ipul Kraton">
+                            </div>
+                            <h3>Ipul Kraton</h3>
+                            <p class="role">Lead Developer</p>
+                            <p class="bio">Full-stack expert passionate about clean code and innovative web technologies.</p>
+                            <div class="team-social">
+                                <a href="#" title="Email">📧</a>
+                                <a href="#" title="LinkedIn">💼</a>
+                                <a href="#" title="GitHub">💻</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES PAGE -->
+    <div id="services" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <h1>Our Services</h1>
+                    <p>Kami percaya setiap pasang sepatu memiliki nilai tersendiri. Oleh karena itu, setiap proses pencucian dilakukan dengan teknik yang tepat, menggunakan produk berkualitas, sehingga sepatu kembali bersih, nyaman dipakai, dan tampak seperti baru.</p>
+                </section>
+
+                <section class="services-grid">
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <img src="images/runni.jpg" alt="running">
+                            </div>
+                            <h3>Cleaning Shoes Running</h3>
+                        </div>
+                        <p>Sepatu running sering terkena debu, keringat, dan noda setelah digunakan berolahraga. Kami membersihkannya secara menyeluruh agar kembali bersih, nyaman dipakai, dan tetap menjaga kualitas bahan serta bantalan sepatu.</p>
+                        <ul class="service-features">
+                            <li>Pembersihan menyeluruh</li>
+                            <li>Menghilangkan noda</li>
+                            <li>Membersihkan outsole & midsole</li>
+                            <li>Menghilangkan bau</li>
+                             <li>Proses pengeringan aman</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <img src="images/canvas.jpg" alt="canvas">
+                            </div>
+                            <h3>Cleaning Shoes Canvas</h3>
+                        </div>
+                        <p>Sepatu canvas memerlukan perawatan khusus agar warna dan bahannya tetap terjaga. Kami membersihkan setiap bagian dengan aman sehingga sepatu kembali bersih tanpa merusak serat kain.</p>
+                        <ul class="service-features">
+                            <li>Pembersihan kain</li>
+                            <li>Penghilangan noda</li>
+                            <li>Pembersihan sol</li>
+                            <li>Perawatan warna</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <img src="images/roda.jpg" alt="roda">
+                            </div>
+                            <h3>Cleaning Shoes Roda</h3>
+                        </div>
+                        <p>Sepatu roda dibersihkan dengan hati-hati tanpa mengganggu fungsi roda dan komponennya. Kami memastikan sepatu tetap bersih, nyaman digunakan, dan roda tetap berfungsi dengan baik.</p>
+                        <ul class="service-features">
+                            <li>Pembersihan roda</li>
+                            <li>Penghilangan noda</li>
+                            <li>Pemeliharaan komponen</li>
+                            <li>Perawatan fungsi roda</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <img src="images/outdoor.jpg" alt="outdoor">
+                            </div>
+                            <h3>Cleaning Shoes Outdor</h3>
+                        </div>
+                        <p>Sepatu outdoor sering terkena lumpur, debu, dan kotoran saat digunakan di alam terbuka. Kami membersihkan hingga ke sela-sela sepatu agar kembali bersih dan siap digunakan kembali.</p>
+                        <ul class="service-features">
+                            <li>Pembersihan lumpur</li>
+                            <li>Penghilangan debu</li>
+                            <li>Pembersihan kotoran</li>
+                            <li>Perawatan sela-sela sepatu</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <img src="images/suede.jpg" alt="suede">
+                            </div>
+                            <h3>Cleaning Shoes Suede</h3>
+                        </div>
+                        <p>Sepatu berbahan suede membutuhkan penanganan khusus agar teksturnya tetap halus. Kami menggunakan teknik dan cairan khusus sehingga noda hilang tanpa merusak permukaan suede.</p>
+                        <ul class="service-features">
+                            <li>Pembersihan suede</li>
+                            <li>Penghilangan noda</li>
+                            <li>Perawatan tekstur</li>
+                            <li>Pemeliharaan permukaan</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <img src="images/kulit.jpg" alt="kulit">
+                            </div>
+                            <h3>Cleaning Shoes Kulit</h3>
+                        </div>
+                        <p>Sepatu kulit akan dibersihkan sekaligus dirawat agar tetap mengkilap, lembut, dan tidak mudah retak. Proses dilakukan menggunakan produk yang aman untuk material kulit.</p>
+                        <ul class="service-features">
+                            <li>Pembersihan kulit</li>
+                            <li>Penghilangan noda</li>
+                            <li>Perawatan tekstur</li>
+                            <li>Pemeliharaan permukaan</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="contact-grid">
+                    <div class="contact-form glass">
+                        <h2>Get In Touch</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info glass">
+                        <h2>Contact Information</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div class="contact-item-text">
+                                <h4>Email</h4>
+                                <p>cleanshoes@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-text">
+                                <h4>Phone</h4>
+                                <p>+62 1922 1903 1980</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-text">
+                                <h4>Address</h4>
+                                <p>Kraton Street<br> Kebon Jeruk, No.22</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🕒</div>
+                            <div class="contact-item-text">
+                                <h4>Opening Hours</h4>
+                                <p>Mon-Fri: 8AM-9PM<br>Sat-Sun: 10AM-6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contact-map-section">
+                    <div class="contact-map glass">
+                        <h2>Find Us</h2>
+                      <div class="map-container">
+                         <div id="map"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    // Koordinat (contoh Monas Jakarta)
+    var map = L.map('map').setView([-6.1754, 106.8272], 15);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([-6.1754,106.8272])
+        .addTo(map)
+        .bindPopup("<b>ShoeCare</b><br>Lokasi Toko")
+        .openPopup();
+</script>
+    <!-- SINGLE FOOTER -->
+    <div id="footer">
+        <div class="container">
+            <footer class="glass">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="#" onclick="showPage('about')">About Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">XML Sitemap</a>
+                        <a href="#" onclick="showPage('contact')">Contact</a>
+                    </div>
+                    <div class="copyright">
+                        &copy; 2025 Glossy Touch. All rights reserved. Crafted with modern web technologies. 
+                        Provided by <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+<script src="templatemo-glossy-touch.js"></script>
+</body>
+</html>
